@@ -19,8 +19,10 @@ export default {
         'jaded-bg': '#0f0f0f',
         'jaded-surface': '#1a1a1a',
         'jaded-border': '#2a2a2a',
-        'art-bg': '#1a1815',
-        'art-surface': '#231f1c',
+        // Art (light mode) - cream/off-white base
+        'art-bg': '#faf8f4',
+        'art-surface': '#ffffff',
+        'art-border': '#e8e4dc',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

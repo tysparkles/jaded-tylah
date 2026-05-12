@@ -3,42 +3,42 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Work With Us — TylahJadeArt">
-  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-jaded-bg/80 backdrop-blur-md border-b border-white/5">
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-cream/90 backdrop-blur-md border-b border-art-border">
     <a href="/" class="flex items-center gap-3">
       <img src="/favicon.svg" alt="Dragon" class="w-10 h-10" />
       <span class="text-xl font-display font-bold tracking-tight">
         <span class="text-dusty-pink">JADED</span>
         <span class="text-muted-sage"> × </span>
-        <span class="text-cream">TylahJade</span>
+        <span class="text-charcoal">TylahJade</span>
       </span>
     </a>
-    <div class="flex gap-8 text-sm text-muted-silver">
+    <div class="flex gap-8 text-sm text-smoky">
       <a href="/design" class="hover:text-moss-green transition-colors">Design</a>
-      <a href="/art" class="text-moss-green">Art</a>
+      <a href="/art" class="text-moss-green font-medium">Art</a>
     </div>
   </nav>
 
-  <main>
+  <main class="bg-art-bg min-h-screen">
     <section class="min-h-[60vh] flex items-center px-6 pt-32 pb-20 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-art-bg via-charcoal to-art-surface/50"></div>
-      <div class="absolute w-80 h-80 bg-moss-green/5 rounded-full blur-3xl top-20 right-20"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-art-bg via-cream to-off-white"></div>
+      <div class="absolute w-80 h-80 bg-moss-green/10 rounded-full blur-3xl top-20 right-20"></div>
 
       <div class="max-w-4xl relative z-10">
         <p class="text-moss-green text-xs tracking-[0.3em] uppercase mb-6">Let's Create Together</p>
         <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 leading-tight">
-          <span class="text-cream">Work</span>
+          <span class="text-charcoal">Work</span>
           <span class="text-moss-green"> With Me</span>
         </h1>
-        <p class="text-muted-silver text-xl max-w-2xl leading-relaxed">
+        <p class="text-smoky text-xl max-w-2xl leading-relaxed">
           Own a piece, commission a painting, or collaborate on something unique. Every creative relationship starts with a conversation.
         </p>
       </div>
     </section>
 
     <!-- What I Offer -->
-    <section class="py-24 px-6 border-t border-white/5">
+    <section class="py-24 px-6 border-t border-art-border bg-white">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">What I Offer</h2>
+        <h2 class="text-xs tracking-[0.3em] text-smoky/50 uppercase mb-12">What I Offer</h2>
         <div class="grid md:grid-cols-3 gap-6">
           {[
             {
@@ -60,13 +60,13 @@ import Layout from '../../layouts/Layout.astro';
               includes: ['Site visit or photos', 'Design mockup', 'Professional finish', 'Materials included']
             },
           ].map((pkg) => (
-            <div class="p-8 bg-art-surface/50 border border-moss-green/10 rounded-2xl">
-              <h3 class="font-display text-xl font-bold mb-2">{pkg.title}</h3>
+            <div class="p-8 bg-art-bg border border-art-border rounded-2xl">
+              <h3 class="font-display text-xl font-bold mb-2 text-charcoal">{pkg.title}</h3>
               <p class="text-moss-green text-sm font-medium mb-4">{pkg.price}</p>
-              <p class="text-muted-silver text-sm leading-relaxed mb-6">{pkg.desc}</p>
+              <p class="text-smoky text-sm leading-relaxed mb-6">{pkg.desc}</p>
               <ul class="space-y-2">
                 {pkg.includes.map((item) => (
-                  <li class="text-sm text-cream/60 flex items-center gap-2">
+                  <li class="text-sm text-charcoal flex items-center gap-2">
                     <span class="text-moss-green">✓</span> {item}
                   </li>
                 ))}
@@ -78,9 +78,9 @@ import Layout from '../../layouts/Layout.astro';
     </section>
 
     <!-- Process -->
-    <section class="py-24 px-6 bg-art-surface/30">
+    <section class="py-24 px-6 bg-cream">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">The Process</h2>
+        <h2 class="text-xs tracking-[0.3em] text-smoky/50 uppercase mb-12">The Process</h2>
         <div class="space-y-8">
           {[
             { step: '01', title: 'Reach Out', desc: 'Tell me what you\'re looking for — an existing piece, a commission, or something you\'ve been dreaming about. No pressure, just a conversation.' },
@@ -88,11 +88,11 @@ import Layout from '../../layouts/Layout.astro';
             { step: '03', title: 'I Create', desc: 'I get to work. For commissions, I\'ll share progress updates along the way so you can see the piece come to life.' },
             { step: '04', title: 'It\'s Yours', desc: 'Once it\'s done and you love it, it ships or gets delivered. Every piece comes with care instructions and a little note from me.' },
           ].map((item) => (
-            <div class="flex gap-6 items-start p-6 bg-white/5 rounded-xl">
+            <div class="flex gap-6 items-start p-6 bg-white rounded-xl border border-art-border">
               <span class="text-moss-green font-display text-3xl font-bold opacity-60">{item.step}</span>
               <div>
-                <h3 class="font-display text-xl font-bold mb-2">{item.title}</h3>
-                <p class="text-muted-silver text-sm leading-relaxed">{item.desc}</p>
+                <h3 class="font-display text-xl font-bold mb-2 text-charcoal">{item.title}</h3>
+                <p class="text-smoky text-sm leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -101,25 +101,25 @@ import Layout from '../../layouts/Layout.astro';
     </section>
 
     <!-- Contact Form -->
-    <section class="py-24 px-6 border-t border-white/5">
+    <section class="py-24 px-6 border-t border-art-border bg-white">
       <div class="max-w-2xl mx-auto">
-        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-4 text-center">Start the Conversation</h2>
-        <p class="text-muted-silver text-center mb-12">Interested in a piece or have a project in mind? I'd love to hear from you.</p>
+        <h2 class="text-xs tracking-[0.3em] text-smoky/50 uppercase mb-4 text-center">Start the Conversation</h2>
+        <p class="text-charcoal text-center mb-12">Interested in a piece or have a project in mind? I'd love to hear from you.</p>
 
         <form class="space-y-6" action="#" method="POST">
           <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Name</label>
-              <input type="text" name="name" required class="w-full px-4 py-3 bg-art-surface border border-white/10 rounded-xl text-cream placeholder-muted-silver focus:border-moss-green/50 focus:outline-none transition-colors" placeholder="Your name" />
+              <label class="text-xs text-charcoal/60 uppercase tracking-wider mb-2 block">Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 bg-art-bg border border-art-border rounded-xl text-charcoal placeholder-smoky focus:border-moss-green/50 focus:outline-none transition-colors" placeholder="Your name" />
             </div>
             <div>
-              <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Email</label>
-              <input type="email" name="email" required class="w-full px-4 py-3 bg-art-surface border border-white/10 rounded-xl text-cream placeholder-muted-silver focus:border-moss-green/50 focus:outline-none transition-colors" placeholder="your@email.com" />
+              <label class="text-xs text-charcoal/60 uppercase tracking-wider mb-2 block">Email</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 bg-art-bg border border-art-border rounded-xl text-charcoal placeholder-smoky focus:border-moss-green/50 focus:outline-none transition-colors" placeholder="your@email.com" />
             </div>
           </div>
           <div>
-            <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Interested In</label>
-            <select name="interest" class="w-full px-4 py-3 bg-art-surface border border-white/10 rounded-xl text-cream focus:border-moss-green/50 focus:outline-none transition-colors">
+            <label class="text-xs text-charcoal/60 uppercase tracking-wider mb-2 block">Interested In</label>
+            <select name="interest" class="w-full px-4 py-3 bg-art-bg border border-art-border rounded-xl text-charcoal focus:border-moss-green/50 focus:outline-none transition-colors">
               <option value="" class="text-charcoal">Select an option</option>
               <option value="original" class="text-charcoal">Buying an Original Painting</option>
               <option value="commission" class="text-charcoal">Commissioning a Painting</option>
@@ -130,8 +130,8 @@ import Layout from '../../layouts/Layout.astro';
             </select>
           </div>
           <div>
-            <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Budget Range</label>
-            <select name="budget" class="w-full px-4 py-3 bg-art-surface border border-white/10 rounded-xl text-cream focus:border-moss-green/50 focus:outline-none transition-colors">
+            <label class="text-xs text-charcoal/60 uppercase tracking-wider mb-2 block">Budget Range</label>
+            <select name="budget" class="w-full px-4 py-3 bg-art-bg border border-art-border rounded-xl text-charcoal focus:border-moss-green/50 focus:outline-none transition-colors">
               <option value="" class="text-charcoal">Select a range</option>
               <option value="under-500" class="text-charcoal">Under $500</option>
               <option value="500-1k" class="text-charcoal">$500 - $1,000</option>
@@ -141,29 +141,29 @@ import Layout from '../../layouts/Layout.astro';
             </select>
           </div>
           <div>
-            <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Tell me about your vision</label>
-            <textarea name="message" rows="5" required class="w-full px-4 py-3 bg-art-surface border border-white/10 rounded-xl text-cream placeholder-muted-silver focus:border-moss-green/50 focus:outline-none transition-colors resize-none" placeholder="What are you envisioning? Any colors, moods, or memories you want the piece to carry?"></textarea>
+            <label class="text-xs text-charcoal/60 uppercase tracking-wider mb-2 block">Tell me about your vision</label>
+            <textarea name="message" rows="5" required class="w-full px-4 py-3 bg-art-bg border border-art-border rounded-xl text-charcoal placeholder-smoky focus:border-moss-green/50 focus:outline-none transition-colors resize-none" placeholder="What are you envisioning? Any colors, moods, or memories you want the piece to carry?"></textarea>
           </div>
-          <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-moss-green to-dusty-pink text-charcoal font-medium rounded-xl hover:opacity-90 transition-all">
+          <button type="submit" class="w-full px-8 py-4 bg-moss-green text-white font-medium rounded-xl hover:bg-moss-green/90 transition-all">
             Send Message
           </button>
-          <p class="text-xs text-muted-silver text-center">I respond to every message — usually within 48 hours.</p>
+          <p class="text-xs text-charcoal/50 text-center">I respond to every message — usually within 48 hours.</p>
         </form>
       </div>
     </section>
 
-    <footer class="py-12 px-6 border-t border-white/5">
+    <footer class="py-12 px-6 bg-cream border-t border-art-border">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-3">
           <img src="/favicon.svg" alt="Dragon" class="w-6 h-6" />
-          <span class="text-sm text-muted-silver">
+          <span class="text-sm text-charcoal">
             <span class="text-dusty-pink">JADED</span>
             <span class="text-muted-sage"> × </span>
-            <span class="text-cream">TylahJade</span>
+            <span>TylahJade</span>
           </span>
         </div>
-        <p class="text-muted-silver text-xs">© 2025 TylahJadeArt. All rights reserved.</p>
-        <div class="flex gap-6 text-xs text-muted-silver">
+        <p class="text-smoky text-xs">© 2025 TylahJadeArt. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-smoky">
           <a href="/art" class="hover:text-moss-green transition-colors">Gallery</a>
           <a href="/art/about" class="hover:text-moss-green transition-colors">About</a>
           <a href="/art/work-with-us" class="hover:text-moss-green transition-colors">Inquire</a>
