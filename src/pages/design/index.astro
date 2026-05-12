@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="JADED DESIGN — Branding, Digital, Motion">
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-jaded-bg/80 backdrop-blur-md border-b border-white/5">
+    <a href="/" class="text-xl font-display font-bold tracking-tight">
+      <span class="text-dusty-pink">JADED</span>
+      <span class="text-muted-sage"> × </span>
+      <span class="text-cream">TylahJade</span>
+    </a>
+    <div class="flex gap-8 text-sm text-muted-silver">
+      <a href="/design" class="text-dusty-pink">Design</a>
+      <a href="/art" class="hover:text-dusty-pink transition-colors">Art</a>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <span class="text-dusty-pink text-xs tracking-[0.3em] uppercase">The structured, strategic side</span>
+      <h1 class="text-5xl font-display font-bold mt-4 mb-6">JADED DESIGN</h1>
+      <p class="text-muted-silver text-lg mb-12 max-w-2xl">
+        Sleek. Intelligent. Cinematic. A digital creative studio focused on branding, websites, motion graphics, and visual systems — built with precision and intention.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {['Branding', 'Web Design', 'Motion Graphics', 'Creative Direction', '3D & Visual Systems', 'Social Content'].map((item) => (
+          <div class="p-8 bg-jaded-surface border border-white/5 rounded-xl hover:border-dusty-pink/30 transition-all group cursor-pointer">
+            <h3 class="font-display text-xl group-hover:text-dusty-pink transition-colors">{item}</h3>
+            <p class="text-muted-silver text-sm mt-2">View projects →</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

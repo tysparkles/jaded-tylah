@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="JADED × TylahJade — Digital worlds. Physical textures.">
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-jaded-bg/80 backdrop-blur-md border-b border-white/5">
+    <a href="/" class="text-xl font-display font-bold tracking-tight">
+      <span class="text-dusty-pink">JADED</span>
+      <span class="text-muted-sage"> × </span>
+      <span class="text-cream">TylahJade</span>
+    </a>
+    <div class="flex gap-8 text-sm text-muted-silver">
+      <a href="/design" class="hover:text-dusty-pink transition-colors">Design</a>
+      <a href="/art" class="hover:text-dusty-pink transition-colors">Art</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-jaded-bg via-charcoal/50 to-jaded-bg"></div>
+      <div class="absolute w-96 h-96 bg-dusty-pink/10 rounded-full blur-3xl -top-20 -left-20 animate-pulse-glow"></div>
+      <div class="absolute w-96 h-96 bg-muted-sage/10 rounded-full blur-3xl -bottom-20 -right-20 animate-pulse-glow" style="animation-delay: 2s;"></div>
+      
+      <div class="relative z-10">
+        <p class="text-dusty-pink text-sm tracking-[0.3em] uppercase mb-6">Digital worlds. Physical textures.</p>
+        <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+          <span class="text-cream">Design, art,</span><br />
+          <span class="text-gradient">immersive storytelling</span>
+        </h1>
+        <p class="text-muted-silver max-w-md mx-auto mb-10 leading-relaxed">
+          Two hemispheres of the same creative mind — structured digital craft meets tactile artistic expression.
+        </p>
+        <div class="flex gap-4 justify-center">
+          <a href="/design" class="px-8 py-4 bg-dusty-pink text-charcoal font-medium rounded-full hover:bg-dusty-pink/90 transition-all hover:scale-105">
+            JADED DESIGN
+          </a>
+          <a href="/art" class="px-8 py-4 border border-muted-sage/50 text-cream font-medium rounded-full hover:border-dusty-pink hover:text-dusty-pink transition-all">
+            TylahJadeArt
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-silver text-xs">
+        <span>scroll</span>
+        <div class="w-px h-8 bg-gradient-to-b from-muted-silver to-transparent"></div>
+      </div>
+    </section>
+
+    <!-- Split intro -->
+    <section class="py-32 px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+        <!-- JADED -->
+        <a href="/design" class="group p-10 bg-jaded-surface border border-jaded-border rounded-2xl hover:border-dusty-pink/50 transition-all">
+          <span class="text-xs text-dusty-pink tracking-widest uppercase">Brand & Digital</span>
+          <h2 class="text-3xl font-display font-bold mt-4 mb-4 group-hover:text-dusty-pink transition-colors">JADED DESIGN</h2>
+          <p class="text-muted-silver leading-relaxed">
+            Sleek, intelligent, cinematic. Branding, websites, motion graphics, and visual systems built with precision and intention.
+          </p>
+          <ul class="mt-6 flex flex-wrap gap-2 text-xs text-muted-silver">
+            <span class="px-3 py-1 bg-white/5 rounded-full">Branding</span>
+            <span class="px-3 py-1 bg-white/5 rounded-full">Web Design</span>
+            <span class="px-3 py-1 bg-white/5 rounded-full">Motion</span>
+            <span class="px-3 py-1 bg-white/5 rounded-full">3D</span>
+          </ul>
+        </a>
+        
+        <!-- Art -->
+        <a href="/art" class="group p-10 bg-art-surface border border-moss-green/20 rounded-2xl hover:border-moss-green/50 transition-all">
+          <span class="text-xs text-moss-green tracking-widest uppercase">Paint & Physical</span>
+          <h2 class="text-3xl font-display font-bold mt-4 mb-4 group-hover:text-moss-green transition-colors">TylahJadeArt</h2>
+          <p class="text-muted-silver leading-relaxed">
+            Playful, painterly, expressive. Paintings, murals, pottery, and mixed media that feel touched by human hands.
+          </p>
+          <ul class="mt-6 flex flex-wrap gap-2 text-xs text-muted-silver">
+            <span class="px-3 py-1 bg-white/5 rounded-full">Paintings</span>
+            <span class="px-3 py-1 bg-white/5 rounded-full">Murals</span>
+            <span class="px-3 py-1 bg-white/5 rounded-full">Pottery</span>
+            <span class="px-3 py-1 bg-white/5 rounded-full">Mixed Media</span>
+          </ul>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 border-t border-white/5 text-center">
+      <p class="text-muted-silver text-sm">
+        © 2025 JADED × TylahJade. Two hemispheres, one creative mind.
+      </p>
+    </footer>
+  </main>
+</Layout>
