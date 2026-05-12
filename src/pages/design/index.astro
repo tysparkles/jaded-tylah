@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="JADED DESIGN — Branding, Digital, Motion">
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-jaded-bg/80 backdrop-blur-md border-b border-white/5">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/favicon.svg" alt="Dragon" class="w-10 h-10" />
+      <span class="text-xl font-display font-bold tracking-tight">
+        <span class="text-dusty-pink">JADED</span>
+        <span class="text-muted-sage"> × </span>
+        <span class="text-cream">TylahJade</span>
+      </span>
+    </a>
+    <div class="flex gap-8 text-sm text-muted-silver">
+      <a href="/design" class="text-dusty-pink">Design</a>
+      <a href="/art" class="hover:text-dusty-pink transition-colors">Art</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="min-h-[70vh] flex items-center px-6 pt-32 pb-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-jaded-bg via-charcoal to-jaded-surface/50"></div>
+      <div class="absolute w-80 h-80 bg-dusty-pink/5 rounded-full blur-3xl top-20 right-20"></div>
+
+      <div class="max-w-4xl relative z-10">
+        <p class="text-dusty-pink text-xs tracking-[0.3em] uppercase mb-6">Digital Creative Studio</p>
+        <h1 class="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight">
+          <span class="text-cream">JADED</span>
+          <span class="text-dusty-pink"> DESIGN</span>
+        </h1>
+        <p class="text-muted-silver text-xl max-w-2xl leading-relaxed">
+          Sleek. Intelligent. Cinematic. We craft digital experiences that feel intentional — where every pixel is placed with purpose and every interaction tells a story.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-24 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">What We Do</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: 'Brand Identity', desc: 'Logos, visual systems, brand guidelines, and strategy that make brands unforgettable.', icon: '◇' },
+            { title: 'Web Design & Dev', desc: ' Websites that are fast, beautiful, and built to convert — from landing pages to full platforms.', icon: '◈' },
+            { title: 'Motion Graphics', desc: 'Animated logos, title sequences, social content, and video edits that bring brands to life.', icon: '◆' },
+            { title: 'Creative Direction', desc: 'Campaign concepts, art direction, and creative strategy for brands that want to stand out.', icon: '◉' },
+            { title: '3D & Visual Systems', desc: '3D renders, product visualization, and scalable design systems for digital-first brands.', icon: '◎' },
+            { title: 'Social Content', desc: 'Instagram feeds, TikTok visuals, and content systems that keep brands consistent and magnetic.', icon: '●' },
+          ].map((item) => (
+            <div class="p-8 bg-jaded-surface/50 border border-white/5 rounded-2xl hover:border-dusty-pink/30 transition-all group">
+              <span class="text-dusty-pink text-2xl mb-4 block">{item.icon}</span>
+              <h3 class="font-display text-xl font-bold mb-3 group-hover:text-dusty-pink transition-colors">{item.title}</h3>
+              <p class="text-muted-silver text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 px-6 bg-jaded-surface/30">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">How We Work</h2>
+        <div class="space-y-12">
+          {[
+            { num: '01', title: 'Discover', desc: 'We dive deep into your brand, your audience, and your goals. Every project starts with understanding.' },
+            { num: '02', title: 'Define', desc: 'We establish the strategy, direction, and creative framework before a single pixel is placed.' },
+            { num: '03', title: 'Design', desc: 'Iterative, collaborative design sprints. You see the work early and often.' },
+            { num: '04', title: 'Deliver', desc: 'Polished, production-ready files with everything you need to launch with confidence.' },
+          ].map((step) => (
+            <div class="flex gap-8 items-start">
+              <span class="text-dusty-pink font-display text-4xl font-bold opacity-50">{step.num}</span>
+              <div>
+                <h3 class="font-display text-2xl font-bold mb-2">{step.title}</h3>
+                <p class="text-muted-silver leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 text-center border-t border-white/5">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl font-display font-bold mb-6 text-cream">Ready to build something remarkable?</h2>
+        <p class="text-muted-silver mb-10">Tell us about your project. We typically respond within 24 hours.</p>
+        <a href="/design/work-with-us" class="inline-flex items-center gap-2 px-8 py-4 bg-dusty-pink text-charcoal font-medium rounded-full hover:bg-dusty-pink/90 transition-all">
+          Work with us
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="/favicon.svg" alt="Dragon" class="w-6 h-6" />
+          <span class="text-sm text-muted-silver">
+            <span class="text-dusty-pink">JADED</span>
+            <span class="text-muted-sage"> × </span>
+            <span class="text-cream">TylahJade</span>
+          </span>
+        </div>
+        <p class="text-muted-silver text-xs">© 2025 JADED DESIGN. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-muted-silver">
+          <a href="/design" class="hover:text-dusty-pink transition-colors">Work</a>
+          <a href="/design/about" class="hover:text-dusty-pink transition-colors">About</a>
+          <a href="/design/work-with-us" class="hover:text-dusty-pink transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>

@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="TylahJadeArt — Paintings, Murals, Mixed Media">
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-jaded-bg/80 backdrop-blur-md border-b border-white/5">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/favicon.svg" alt="Dragon" class="w-10 h-10" />
+      <span class="text-xl font-display font-bold tracking-tight">
+        <span class="text-dusty-pink">JADED</span>
+        <span class="text-muted-sage"> × </span>
+        <span class="text-cream">TylahJade</span>
+      </span>
+    </a>
+    <div class="flex gap-8 text-sm text-muted-silver">
+      <a href="/design" class="hover:text-moss-green transition-colors">Design</a>
+      <a href="/art" class="text-moss-green">Art</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="min-h-[70vh] flex items-center px-6 pt-32 pb-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-art-bg via-charcoal to-art-surface/50"></div>
+      <div class="absolute w-80 h-80 bg-moss-green/5 rounded-full blur-3xl top-20 right-20"></div>
+      <div class="absolute w-60 h-60 bg-dusty-pink/5 rounded-full blur-3xl bottom-20 left-20"></div>
+
+      <div class="max-w-4xl relative z-10">
+        <p class="text-moss-green text-xs tracking-[0.3em] uppercase mb-6">The Tactile Hemisphere</p>
+        <h1 class="text-5xl md:text-7xl font-display font-bold mb-8 leading-tight">
+          <span class="text-cream">Tylah</span>
+          <span class="text-moss-green">JadeArt</span>
+        </h1>
+        <p class="text-muted-silver text-xl max-w-2xl leading-relaxed">
+          Playful. Painterly. Expressive. A world of paintings, murals, pottery, and mixed media that feels touched by human hands — where texture, color, and emotion take physical form.
+        </p>
+      </div>
+    </section>
+
+    <!-- Disciplines -->
+    <section class="py-24 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">What I Create</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: 'Paintings', desc: 'Acrylic and mixed media on canvas — bold colors, layered textures, and emotional depth.', emoji: '🎨' },
+            { title: 'Murals', desc: 'Large-scale wall art that transforms spaces. From intimate corners to entire rooms.', emoji: '🖌️' },
+            { title: 'Pottery', desc: 'Hand-thrown ceramics and sculptural pieces. Functional art that lives in everyday moments.', emoji: '🏺' },
+            { title: 'Sketchbooks', desc: 'Intimate, experimental work. Rough ideas and finished thoughts side by side.', emoji: '📓' },
+            { title: 'Photography', desc: 'Capturing moments, textures, and the beauty in the imperfect. Film and digital.', emoji: '📷' },
+            { title: 'Mixed Media', desc: 'Where materials collide — collage, paint, photography, and found objects together.', emoji: '✨' },
+          ].map((item) => (
+            <div class="p-8 bg-art-surface/50 border border-moss-green/10 rounded-2xl hover:border-moss-green/40 transition-all group">
+              <span class="text-3xl mb-4 block">{item.emoji}</span>
+              <h3 class="font-display text-xl font-bold mb-3 group-hover:text-moss-green transition-colors">{item.title}</h3>
+              <p class="text-muted-silver text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 px-6 bg-art-surface/30">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">The Practice</h2>
+        <div class="space-y-12">
+          {[
+            { num: '01', title: 'Feel First', desc: 'Every piece starts with an emotion, a memory, or a question — not a reference image.' },
+            { num: '02', title: 'Gather Materials', desc: 'I work with whatever feels right: acrylic, oil, clay, photography, paper, found objects.' },
+            { num: '03', title: 'Build Layers', desc: 'Texture is everything. Layers upon layers — scraping back, building up, revealing and concealing.' },
+            { num: '04', title: 'Let It Breathe', desc: 'Work in progress. Walking away. Coming back with fresh eyes. The piece knows when it\'s done.' },
+          ].map((step) => (
+            <div class="flex gap-8 items-start">
+              <span class="text-moss-green font-display text-4xl font-bold opacity-50">{step.num}</span>
+              <div>
+                <h3 class="font-display text-2xl font-bold mb-2">{step.title}</h3>
+                <p class="text-muted-silver leading-relaxed">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6 text-center border-t border-white/5">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-3xl font-display font-bold mb-6 text-cream">Own an original</h2>
+        <p class="text-muted-silver mb-10">Paintings, prints, and ceramics — available for purchase. Commissions also welcome.</p>
+        <a href="/art/work-with-us" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-moss-green to-dusty-pink text-charcoal font-medium rounded-full hover:opacity-90 transition-all">
+          Inquire about available work
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="/favicon.svg" alt="Dragon" class="w-6 h-6" />
+          <span class="text-sm text-muted-silver">
+            <span class="text-dusty-pink">JADED</span>
+            <span class="text-muted-sage"> × </span>
+            <span class="text-cream">TylahJade</span>
+          </span>
+        </div>
+        <p class="text-muted-silver text-xs">© 2025 TylahJadeArt. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-muted-silver">
+          <a href="/art" class="hover:text-moss-green transition-colors">Gallery</a>
+          <a href="/art/about" class="hover:text-moss-green transition-colors">About</a>
+          <a href="/art/work-with-us" class="hover:text-moss-green transition-colors">Inquire</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>

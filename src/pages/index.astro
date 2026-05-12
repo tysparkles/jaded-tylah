@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="absolute inset-0 bg-gradient-to-b from-jaded-bg via-charcoal/50 to-jaded-bg"></div>
       <div class="absolute w-96 h-96 bg-dusty-pink/10 rounded-full blur-3xl -top-20 -left-20 animate-pulse-glow"></div>
       <div class="absolute w-96 h-96 bg-muted-sage/10 rounded-full blur-3xl -bottom-20 -right-20 animate-pulse-glow" style="animation-delay: 2s;"></div>
-      
+
       <div class="relative z-10">
         <p class="text-dusty-pink text-sm tracking-[0.3em] uppercase mb-6">Digital worlds. Physical textures.</p>
         <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-muted-silver max-w-md mx-auto mb-10 leading-relaxed">
           Two hemispheres of the same creative mind — structured digital craft meets tactile artistic expression.
         </p>
-        <div class="flex gap-4 justify-center">
+        <div class="flex gap-4 justify-center flex-wrap">
           <a href="/design" class="px-8 py-4 bg-dusty-pink text-charcoal font-medium rounded-full hover:bg-dusty-pink/90 transition-all hover:scale-105">
             JADED DESIGN
           </a>
@@ -44,53 +44,119 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- Scroll indicator -->
       <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-silver text-xs">
         <span>scroll</span>
         <div class="w-px h-8 bg-gradient-to-b from-muted-silver to-transparent"></div>
       </div>
     </section>
 
-    <!-- Split intro -->
+    <!-- Philosophy -->
     <section class="py-32 px-6">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-        <!-- JADED -->
-        <a href="/design" class="group p-10 bg-jaded-surface border border-jaded-border rounded-2xl hover:border-dusty-pink/50 transition-all">
-          <span class="text-xs text-dusty-pink tracking-widest uppercase">Brand & Digital</span>
-          <h2 class="text-3xl font-display font-bold mt-4 mb-4 group-hover:text-dusty-pink transition-colors">JADED DESIGN</h2>
-          <p class="text-muted-silver leading-relaxed">
-            Sleek, intelligent, cinematic. Branding, websites, motion graphics, and visual systems built with precision and intention.
-          </p>
-          <ul class="mt-6 flex flex-wrap gap-2 text-xs text-muted-silver">
-            <span class="px-3 py-1 bg-white/5 rounded-full">Branding</span>
-            <span class="px-3 py-1 bg-white/5 rounded-full">Web Design</span>
-            <span class="px-3 py-1 bg-white/5 rounded-full">Motion</span>
-            <span class="px-3 py-1 bg-white/5 rounded-full">3D</span>
-          </ul>
-        </a>
-        
-        <!-- Art -->
-        <a href="/art" class="group p-10 bg-art-surface border border-moss-green/20 rounded-2xl hover:border-moss-green/50 transition-all">
-          <span class="text-xs text-moss-green tracking-widest uppercase">Paint & Physical</span>
-          <h2 class="text-3xl font-display font-bold mt-4 mb-4 group-hover:text-moss-green transition-colors">TylahJadeArt</h2>
-          <p class="text-muted-silver leading-relaxed">
-            Playful, painterly, expressive. Paintings, murals, pottery, and mixed media that feel touched by human hands.
-          </p>
-          <ul class="mt-6 flex flex-wrap gap-2 text-xs text-muted-silver">
-            <span class="px-3 py-1 bg-white/5 rounded-full">Paintings</span>
-            <span class="px-3 py-1 bg-white/5 rounded-full">Murals</span>
-            <span class="px-3 py-1 bg-white/5 rounded-full">Pottery</span>
-            <span class="px-3 py-1 bg-white/5 rounded-full">Mixed Media</span>
-          </ul>
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-xs tracking-[0.3em] text-dusty-pink uppercase mb-6">The Vision</p>
+        <blockquote class="text-3xl md:text-4xl font-display font-light leading-relaxed text-cream/90">
+          "Two hemispheres of the same creative mind."
+        </blockquote>
+        <p class="text-muted-silver mt-8 max-w-2xl mx-auto leading-relaxed">
+          One side builds precise, cinematic digital experiences. The other creates tactile, textured works that feel human. Together, they form a complete creative identity — where strategy meets soul, and pixels meet paint.
+        </p>
+      </div>
+    </section>
+
+    <!-- Split intro -->
+    <section class="py-32 px-6 border-y border-white/5">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20">
+          <p class="text-xs tracking-[0.2em] text-cream/40 uppercase mb-4">Two Wings. One Mind.</p>
+          <h2 class="font-display text-3xl md:text-5xl font-bold text-cream">Choose Your World</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- JADED DESIGN -->
+          <a href="/design" class="group p-10 bg-jaded-surface border border-white/5 rounded-2xl hover:border-dusty-pink/50 transition-all">
+            <div class="w-12 h-12 rounded-full bg-dusty-pink/10 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-dusty-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="text-xs text-dusty-pink tracking-widest uppercase">Brand & Digital</span>
+            <h2 class="text-3xl font-display font-bold mt-2 mb-4 group-hover:text-dusty-pink transition-colors">JADED DESIGN</h2>
+            <p class="text-muted-silver leading-relaxed mb-6">
+              Sleek, intelligent, cinematic. We build brands, websites, motion graphics, and visual systems with precision and intention.
+            </p>
+            <ul class="flex flex-wrap gap-2 text-xs text-muted-silver">
+              <span class="px-3 py-1 bg-white/5 rounded-full">Branding</span>
+              <span class="px-3 py-1 bg-white/5 rounded-full">Web Design</span>
+              <span class="px-3 py-1 bg-white/5 rounded-full">Motion</span>
+              <span class="px-3 py-1 bg-white/5 rounded-full">3D</span>
+            </ul>
+            <div class="mt-6 text-dusty-pink text-sm font-medium flex items-center gap-2 group-hover:gap-4 transition-all">
+              Explore <span>→</span>
+            </div>
+          </a>
+
+          <!-- TylahJadeArt -->
+          <a href="/art" class="group p-10 bg-art-surface border border-moss-green/20 rounded-2xl hover:border-moss-green/50 transition-all">
+            <div class="w-12 h-12 rounded-full bg-moss-green/10 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-moss-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>
+            </div>
+            <span class="text-xs text-moss-green tracking-widest uppercase">Paint & Physical</span>
+            <h2 class="text-3xl font-display font-bold mt-2 mb-4 group-hover:text-moss-green transition-colors">TylahJadeArt</h2>
+            <p class="text-muted-silver leading-relaxed mb-6">
+              Playful, painterly, expressive. Paintings, murals, pottery, and mixed media that feel touched by human hands.
+            </p>
+            <ul class="flex flex-wrap gap-2 text-xs text-muted-silver">
+              <span class="px-3 py-1 bg-white/5 rounded-full">Paintings</span>
+              <span class="px-3 py-1 bg-white/5 rounded-full">Murals</span>
+              <span class="px-3 py-1 bg-white/5 rounded-full">Pottery</span>
+              <span class="px-3 py-1 bg-white/5 rounded-full">Mixed Media</span>
+            </ul>
+            <div class="mt-6 text-moss-green text-sm font-medium flex items-center gap-2 group-hover:gap-4 transition-all">
+              Explore <span>→</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 px-6 text-center">
+      <div class="max-w-2xl mx-auto">
+        <p class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-6">Let's Create</p>
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6 text-cream">Ready to bring something to life?</h2>
+        <p class="text-muted-silver mb-10">
+          Whether you need a brand identity, a website, or a custom artwork — every project starts with a conversation.
+        </p>
+        <a href="mailto:hello@jadedtylah.com" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-dusty-pink to-moss-green text-charcoal font-medium rounded-full hover:opacity-90 transition-all">
+          Start a conversation
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 px-6 border-t border-white/5 text-center">
-      <p class="text-muted-silver text-sm">
-        © 2025 JADED × TylahJade. Two hemispheres, one creative mind.
-      </p>
+    <footer class="py-16 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto text-center">
+        <a href="/" class="flex items-center justify-center gap-3 mb-6">
+          <img src="/favicon.svg" alt="Dragon" class="w-8 h-8" />
+          <span class="font-display text-sm">
+            <span class="text-dusty-pink">JADED</span>
+            <span class="text-muted-sage"> × </span>
+            <span class="text-cream">TylahJade</span>
+          </span>
+        </a>
+        <p class="text-muted-silver text-sm">
+          © 2025 JADED × TylahJade. Two hemispheres, one creative mind.
+        </p>
+        <div class="mt-4 flex justify-center gap-6 text-xs text-muted-silver">
+          <a href="/design" class="hover:text-dusty-pink transition-colors">Design</a>
+          <a href="/art" class="hover:text-dusty-pink transition-colors">Art</a>
+        </div>
+      </div>
     </footer>
   </main>
 </Layout>

@@ -1,0 +1,173 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Work With Us — JADED DESIGN">
+  <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center bg-jaded-bg/80 backdrop-blur-md border-b border-white/5">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/favicon.svg" alt="Dragon" class="w-10 h-10" />
+      <span class="text-xl font-display font-bold tracking-tight">
+        <span class="text-dusty-pink">JADED</span>
+        <span class="text-muted-sage"> × </span>
+        <span class="text-cream">TylahJade</span>
+      </span>
+    </a>
+    <div class="flex gap-8 text-sm text-muted-silver">
+      <a href="/design" class="text-dusty-pink">Design</a>
+      <a href="/art" class="hover:text-dusty-pink transition-colors">Art</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="min-h-[60vh] flex items-center px-6 pt-32 pb-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-jaded-bg via-charcoal to-jaded-surface/50"></div>
+      <div class="absolute w-80 h-80 bg-dusty-pink/5 rounded-full blur-3xl top-20 right-20"></div>
+
+      <div class="max-w-4xl relative z-10">
+        <p class="text-dusty-pink text-xs tracking-[0.3em] uppercase mb-6">Let's Build Something</p>
+        <h1 class="text-5xl md:text-6xl font-display font-bold mb-8 leading-tight">
+          <span class="text-cream">Work</span>
+          <span class="text-dusty-pink"> With Us</span>
+        </h1>
+        <p class="text-muted-silver text-xl max-w-2xl leading-relaxed">
+          Every great project starts with a conversation. Tell us what you're building — we'll tell you how we can help make it remarkable.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services & Pricing -->
+    <section class="py-24 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">What We Offer</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: 'Brand Identity',
+              price: 'From $2,500',
+              desc: 'Complete brand systems including logo, color palette, typography, and guidelines. For brands that need to stand out and stay consistent.',
+              includes: ['Logo design (3-5 concepts)', 'Color & typography', 'Brand guidelines PDF', 'Source files']
+            },
+            {
+              title: 'Web Design & Dev',
+              price: 'From $3,500',
+              desc: 'Custom websites that are fast, beautiful, and built to convert. From single landing pages to full multi-page sites.',
+              includes: ['Custom design', 'Responsive development', 'SEO foundation', 'CMS integration optional']
+            },
+            {
+              title: 'Creative Direction',
+              price: 'Day rate available',
+              desc: 'For brands that need strategic creative guidance. Campaign concepts, art direction, and creative oversight.',
+              includes: ['Creative strategy', 'Campaign concepts', 'Art direction', 'Ongoing consultation']
+            },
+          ].map((pkg) => (
+            <div class="p-8 bg-jaded-surface/50 border border-white/5 rounded-2xl">
+              <h3 class="font-display text-xl font-bold mb-2">{pkg.title}</h3>
+              <p class="text-dusty-pink text-sm font-medium mb-4">{pkg.price}</p>
+              <p class="text-muted-silver text-sm leading-relaxed mb-6">{pkg.desc}</p>
+              <ul class="space-y-2">
+                {pkg.includes.map((item) => (
+                  <li class="text-sm text-cream/60 flex items-center gap-2">
+                    <span class="text-dusty-pink">✓</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 px-6 bg-jaded-surface/30">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-12">The Process</h2>
+        <div class="space-y-8">
+          {[
+            { step: '01', title: 'Reach Out', desc: 'Send us a message telling us about your project — what you\'re building, your timeline, and your budget. No pressure, no hard sell.' },
+            { step: '02', title: 'Discovery Call', desc: 'We\'ll jump on a quick call (30 min) to understand your needs, answer questions, and see if we\'re a good fit.' },
+            { step: '03', title: 'Proposal', desc: 'We\'ll send over a detailed proposal with the scope, timeline, and investment — customized to your project.' },
+            { step: '04', title: 'Let\'s Create', desc: 'Once we\'re aligned, we dive in. You\'ll see work early and often, with clear checkpoints along the way.' },
+          ].map((item) => (
+            <div class="flex gap-6 items-start p-6 bg-white/5 rounded-xl">
+              <span class="text-dusty-pink font-display text-3xl font-bold opacity-60">{item.step}</span>
+              <div>
+                <h3 class="font-display text-xl font-bold mb-2">{item.title}</h3>
+                <p class="text-muted-silver text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-24 px-6 border-t border-white/5">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-xs tracking-[0.3em] text-cream/40 uppercase mb-4 text-center">Start the Conversation</h2>
+        <p class="text-muted-silver text-center mb-12">No project too small, no brief too ambitious. Tell us what you're working on.</p>
+
+        <form class="space-y-6" action="#" method="POST">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 bg-jaded-surface border border-white/10 rounded-xl text-cream placeholder-muted-silver focus:border-dusty-pink/50 focus:outline-none transition-colors" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Email</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 bg-jaded-surface border border-white/10 rounded-xl text-cream placeholder-muted-silver focus:border-dusty-pink/50 focus:outline-none transition-colors" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div>
+            <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Project Type</label>
+            <select name="project_type" class="w-full px-4 py-3 bg-jaded-surface border border-white/10 rounded-xl text-cream focus:border-dusty-pink/50 focus:outline-none transition-colors">
+              <option value="" class="text-charcoal">Select a service</option>
+              <option value="branding" class="text-charcoal">Brand Identity</option>
+              <option value="web" class="text-charcoal">Web Design & Development</option>
+              <option value="motion" class="text-charcoal">Motion Graphics</option>
+              <option value="creative" class="text-charcoal">Creative Direction</option>
+              <option value="other" class="text-charcoal">Something else</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Budget Range</label>
+            <select name="budget" class="w-full px-4 py-3 bg-jaded-surface border border-white/10 rounded-xl text-cream focus:border-dusty-pink/50 focus:outline-none transition-colors">
+              <option value="" class="text-charcoal">Select a range</option>
+              <option value="under-1k" class="text-charcoal">Under $1,000</option>
+              <option value="1k-3k" class="text-charcoal">$1,000 - $3,000</option>
+              <option value="3k-5k" class="text-charcoal">$3,000 - $5,000</option>
+              <option value="5k-10k" class="text-charcoal">$5,000 - $10,000</option>
+              <option value="10k+" class="text-charcoal">$10,000+</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs text-cream/60 uppercase tracking-wider mb-2 block">Tell us about your project</label>
+            <textarea name="message" rows="5" required class="w-full px-4 py-3 bg-jaded-surface border border-white/10 rounded-xl text-cream placeholder-muted-silver focus:border-dusty-pink/50 focus:outline-none transition-colors resize-none" placeholder="What are you building? What's your timeline? Any references or inspiration?"></textarea>
+          </div>
+          <button type="submit" class="w-full px-8 py-4 bg-dusty-pink text-charcoal font-medium rounded-xl hover:bg-dusty-pink/90 transition-all">
+            Send Message
+          </button>
+          <p class="text-xs text-muted-silver text-center">We typically respond within 24 hours.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-white/5">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="/favicon.svg" alt="Dragon" class="w-6 h-6" />
+          <span class="text-sm text-muted-silver">
+            <span class="text-dusty-pink">JADED</span>
+            <span class="text-muted-sage"> × </span>
+            <span class="text-cream">TylahJade</span>
+          </span>
+        </div>
+        <p class="text-muted-silver text-xs">© 2025 JADED DESIGN. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-muted-silver">
+          <a href="/design" class="hover:text-dusty-pink transition-colors">Work</a>
+          <a href="/design/about" class="hover:text-dusty-pink transition-colors">About</a>
+          <a href="/design/work-with-us" class="hover:text-dusty-pink transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
